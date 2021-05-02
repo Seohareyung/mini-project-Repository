@@ -22,7 +22,7 @@
 
 ### 파일 함수 : 파일 저장 함수, 파일 읽어오는 함수
 
-### 추가 함수 : selectMenu(), selectDataNo(), creatscore(), readscore()
+### 추가 함수 : selectMenu(), selectDataNo()
  
 
 ## 팀소개 및 팀원이 맡은 역할
