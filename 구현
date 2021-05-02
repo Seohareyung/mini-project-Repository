@@ -7,10 +7,6 @@ typedef struct{
   int Major;
 } score;
 
-int selectmenu() {
-
-  return menu;
-}
 
 int creatscore(score *s)
 void readscore(score *s)
