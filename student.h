@@ -1,8 +1,13 @@
+
 typedef struct{
     char name[100];
     int studentno;
     int attdance;
 } Attendance;
+
+int creatStudent(Attendance *s); // 학생 정보 생성
+
+void readStudent(Attendance *s); // 학생 정보 조회
 
 int updateStudent(Attendance *a); //학생 정보 수정
 
