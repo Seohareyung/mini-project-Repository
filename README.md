@@ -1,4 +1,4 @@
-### +mini project 주제
++ mini project 주제
 
 #### 출석부 관리 시스템
 
