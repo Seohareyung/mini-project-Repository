@@ -10,9 +10,9 @@
 ### 22000617  임정현   3회
 ### 22000353  서하령   3회
 
-### Create : 
+### Create : 학생 정보 생성
 
-### Read : 
+### Read : 학생 정보 조회
 
 ### Update : 학생 정보 수정 & 출석 정보 업데이트
 
@@ -22,7 +22,7 @@
 
 ### 파일 함수 : 파일 저장 함수, 파일 읽어오는 함수
 
-### 추가 함수 : selectMenu(), selectDataNo()
+### 추가 함수 : selectMenu(), selectDataNo(), creatscore(), readscore()
  
 
 ## 팀소개 및 팀원이 맡은 역할
