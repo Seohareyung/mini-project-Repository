@@ -2,6 +2,7 @@ typedef struct{
     char name[100];
     int studentno;
     int attdance;
+    int late;
 } Attendance;
 
 int updateStudent(Attendance *a); //학생 정보 수정
