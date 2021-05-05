@@ -19,4 +19,12 @@ int deleteProduct(Attendance *s){
 	printf("=> 삭제됨!\n");
 	return 1;
 
-} // 제품 삭제 함수 : 
+} // 제품 삭제 함수 : 메뉴
+
+int selectDataNo(Attendance *s, int count){
+	int no;
+	listProduct(s, count);
+	printf("\n번호는 (취소 :0)?");
+	scanf("%d", &no);
+	return no;
+}
