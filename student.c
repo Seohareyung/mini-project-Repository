@@ -12,6 +12,20 @@ int updateStudent(Attendance *s){
 
 } // 학생 정보 수정 : 메뉴
 
+int updateAttendance(Attendance *s, count){
+	int no;
+	int up;
+
+	listStudent(s,count);
+	no = selectDataNo(s, count);
+	printf("\n 출석? (Yes:1, No:0)");
+	scanf("%d", &up);
+	s[no-1].attendance+=up;
+       	printf("\n 지각? (Yes:1, No:0");
+	scanf("%d", &up);
+	s[no-1].late+=up;
+}	
+
 int deleteProduct(Attendance *s){
 	p->studentno = -1;
 	p->attendance = -1;
@@ -23,8 +37,10 @@ int deleteProduct(Attendance *s){
 
 int selectDataNo(Attendance *s, int count){
 	int no;
-	listProduct(s, count);
+	listStudent(s, count);
 	printf("\n번호는 (취소 :0)?");
 	scanf("%d", &no);
 	return no;
 }
+
+
