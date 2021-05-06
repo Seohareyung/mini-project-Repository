@@ -3,6 +3,7 @@ typedef struct{
     char name[100];
     int studentno;
     int attdance;
+    int late;
 } Attendance;
 
 int selectMenu(); //메뉴 출력 함수
