@@ -7,7 +7,7 @@ typedef struct{
 
 int selectMenu(); //메뉴 출력 함수
 
-int creatStudent(Attendance *s); // 학생 정보 생성
+int createStudent(Attendance *s); // 학생 정보 생성
 
 void readStudent(Attendance s); // 학생 정보 조회
 
