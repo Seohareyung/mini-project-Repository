@@ -59,9 +59,9 @@ int main(void)
                     if(deleteStudent(&att[no-1])) count--;
                 }
             }
-        else if(menu == 6)
+       /* else if(menu == 6)
         {
-            //saveData(att, index);
+            saveData(att, index);
         }
         else if (menu == 7)
         {
@@ -74,7 +74,7 @@ int main(void)
         else if (menu == 9)
         {
             searchAttendanceNo(att, index);
-        }
+        }*/
     }
     return 0;
 }
