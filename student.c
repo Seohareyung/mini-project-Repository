@@ -45,7 +45,7 @@ int updateStudent(Attendance *s){
 
 } // 학생 정보 수정 : 메뉴 3번
 
-int updateAttendance(Attendance *s,int  count){
+int updateAttendance(Attendance *s, int  count){
 	int no;
 	int up;
 
