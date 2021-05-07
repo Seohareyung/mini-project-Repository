@@ -54,7 +54,7 @@ int updateAttendance(Attendance *s){
 	return 1;
 } //출석 확인 : 메뉴 4번	
 
-int deleteProduct(Attendance *s){
+int deleteStudent(Attendance *s){
 	s->studentno = -1;
 	s->attendance = -1;
 	s->late = -1;
