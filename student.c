@@ -12,7 +12,7 @@ int selectMenu(){
         printf("3. 학생 정보 수정\n");
         printf("4. 출석 정보 업데이트\n");
         printf("5. 학생 정보 삭제\n");
-        printf("6. 파일 저장\n ");
+        printf("6. 파일 저장\n");
         printf("7. 학생명으로 검색\n");
         printf("8. 학번으로 검색\n");
         printf("9. 출석횟수로 검색");
