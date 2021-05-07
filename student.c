@@ -25,6 +25,8 @@ int selectMenu(){
 void listStudent(Attendance *s, int count){
 }
 
+int createStudent(Attendance *s){
+}
 
 
 
