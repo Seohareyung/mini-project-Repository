@@ -1,26 +1,23 @@
-
 typedef struct{
     char name[100];
     int studentno;
-    int attdance;
+    int attendance;
     int late;
 } Attendance;
 
 int selectMenu(); //메뉴 출력 함수
 
-int creatStudent(Attendance *s); // 학생 정보 생성
+int createAStudent(Attendance *s); // 학생 정보 생성
 
-int creatStudent_Attendance(Attendance *s); // 학생 출결 처리
+int updateAttendance(Attendance *s); // 학생 출결 처리
 
-int creatStudent_late(Attendance *s); // 학생 지각 처리 
-
-void readStudent(Attendance *s); // 학생 정보 조회
+void readStudent(Attendance s); // 학생 정보 조회
 
 int loadStudent(Attendance *s); //파일에서 데이터 불러오기
 
 void saveStduent(Attendance *s, int count); //파일에 데이터 저장하기
 
-void listStudent(Attendance *s, int count); //전체 등록된 학생 
+void listStudent(Attendance *s, int count); //전체 등록된 학생
 
 int updateStudent(Attendance *s); //학생 정보 수정
 
@@ -34,5 +31,6 @@ int searchStudent(Attendance *s, int count); //학생검색
 
 int searchStudentNo(Attendance *s, int count); // 학번으로 정렬 검색
 
-int searchAttendaceNo(Attendance *s, int count); //출석 횟수로 검색
+int searchAttendanceNo(Attendance *s, int count); //출석 횟수로 검색
+
 
