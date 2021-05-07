@@ -32,7 +32,7 @@ int deleteStudent(Attendance *s); //학생 정보 삭제
 
 int searchStudent(Attendance *s, int count); //학생검색
 
-int listStudentNo(Attendance *s, int count); // 학번으로 정렬 검색
+int searchStudentNo(Attendance *s, int count); // 학번으로 정렬 검색
 
 int searchAttendaceNo(Attendance *s, int count); //출석 횟수로 검색
 
