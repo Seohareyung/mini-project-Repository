@@ -10,9 +10,7 @@ int selectMenu(); //메뉴 출력 함수
 
 int creatStudent(Attendance *s); // 학생 정보 생성
 
-int creatStudent_Attendance(Attendance *s); // 학생 출결 처리
-
-int creatStudent_late(Attendance *s); // 학생 지각 처리 
+int updateAttendance(Attendance *s); // 학생 출결 처리
 
 void readStudent(Attendance *s); // 학생 정보 조회
 
