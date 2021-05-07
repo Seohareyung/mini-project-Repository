@@ -22,16 +22,9 @@ int selectMenu(){
 	return menu;
 } //메뉴 선택 함수
 
-void listStudent(Attendance *s, int count){
-}
+void listStudent(Attendance *s, int count){}
 
-int createStudent(Attendance *s){
-}
-
-
-
-
-
+int createStudent(Attendance *s){return 0;}
 
 int updateStudent(Attendance *s){
 	char rename[100];
@@ -39,34 +32,32 @@ int updateStudent(Attendance *s){
 	printf("수정할 학생 이름은?");
 	fgets(rename, 100, stdin);
 	rewind(stdin);
-	strcpy(p->name. rename);
+	strcpy(s->name, rename);
 	printf("수정할 학번은?");
-	scanf("%d", &p->studentno);
+	scanf("%d", &s->studentno);
 	printf("=> 수정성공!\n");
 	return 1;
 
 } // 학생 정보 수정 : 메뉴 3번
 
-int updateAttendance(Attendance *s, int  count){
+int updateAttendance(Attendance *s){
 	int no;
 	int up;
 
-	listStudent(s,count);
-	no = selectDataNo(s, count);
 	printf("\n 출석? (Yes:1, No:0)");
 	scanf("%d", &up);
-	s[no-1]->attendance+=up;
+	s[no-1].attendance=s[no-1].attendance+1;
        	printf("\n 지각? (Yes:1, No:0");
 	scanf("%d", &up);
-	s[no-1]->late+=up;
-	printf("=> 출석 확인 와료!\n");
+	s[no-1].late=s[no-1].late+1;
+	printf("=> 출석 확인 완료!\n");
 	return 1;
 } //출석 확인 : 메뉴 4번	
 
 int deleteProduct(Attendance *s){
-	p->studentno = -1;
-	p->attendance = -1;
-	p->late = -1;
+	s->studentno = -1;
+	s->attendance = -1;
+	s->late = -1;
 	printf("=> 삭제됨!\n");
 	return 1;
 
