@@ -7,13 +7,7 @@ typedef struct{
 
 int selectMenu(); //메뉴 출력 함수
 
-<<<<<<< HEAD
-int createAStudent(Attendance *s); // 학생 정보 생성
-=======
 int creatStudent(Attendance *s); // 학생 정보 생성
->>>>>>> 9a5537f66a3c13207adbfdfaf6039afb4dd75ae5
-
-int updateAttendance(Attendance *s); // 학생 출결 처리
 
 void readStudent(Attendance s); // 학생 정보 조회
 
@@ -33,7 +27,7 @@ int deleteStudent(Attendance *s); //학생 정보 삭제
 
 int searchStudent(Attendance *s, int count); //학생검색
 
-int searchStudentNo(Attendance *s, int count); // 학번으로 정렬 검색
+int searchStudentNo(Attendance *s, int count); // 학번으로 검색
 
 int searchAttendanceNo(Attendance *s, int count); //출석 횟수로 검색
 
