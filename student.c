@@ -100,3 +100,6 @@ void readStudent(Attendance s){
         printf("%d %s %5d(회) %d(회)\n", s.studentno, s.name, s.attendance, s.late);
 }
 // 학생 정보 출력
+
+int searchStudent(Attendance *s, int count){}
+
