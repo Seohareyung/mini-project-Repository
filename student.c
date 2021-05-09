@@ -23,18 +23,18 @@ int selectMenu(){
 } //메뉴 선택 함수
 
 typedef struct{
-  char name[20];
-  char attendance[20];
-  int late;
-  int studentno;
+    char name[100];
+    int studentno;
+    int attendance;
+    int late;
 } Attendance;
 
 void listStudent(Attendance *s, int count){
-    printf("\n %d학번 %s이름 %5d출석 %d지각\n");
+    printf("\n 학번 이름 출석 지각\n");
     printf("*****************\n");
     for(int i=0; i<count; i++){
         printf("%d ",i+1);
-        readStduent(s[i]);
+        readStuduent(s[i]);
     }
 }// 학생 데이터 조회 : 메뉴 1번
 
