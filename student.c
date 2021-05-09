@@ -21,6 +21,7 @@ int selectMenu(){
         scanf("%d", &menu);
         return menu;
 } //메뉴 선택 함수
+
 void listStudent(Attendance *s, int count){
 	int i = 0;
     	printf("******************************\n");
@@ -34,15 +35,16 @@ void listStudent(Attendance *s, int count){
 }
 
 int createStudent(Attendance *s){
+
 	char pname[100];
-        getchar();
-        printf("\n학생 이름은? ");
-        fgets(pname, 100, stdin);
+  getchar();
+  printf("\n학생 이름은? ");
+  fgets(pname, 100, stdin);
 	strcpy(s->name, pname);
-        rewind(stdin);
-        printf("학번은? ");
-        scanf("%d", &s->studentno);
-        s->attendance = 0;
+  rewind(stdin);
+  printf("학번은? ");
+  scanf("%d", &s->studentno);
+  s->attendance = 0;
 	s->late = 0;
 	printf("=> 추가 성공!\n");    
 	return 1;
@@ -67,8 +69,8 @@ int updateAttendance(Attendance *s){
 
         printf("\n출석? (Yes:1, No:0): ");
         scanf("%d", &up);
-	if(up == 1) s->attendance=s->attendance+1;
-	else s->late=s->late+1;
+        if(up == 1) s->attendance=s->attendance+1;
+        else s->late=s->late+1;
         printf("=> 출석 확인 완료!\n");
         return 1;
 } //출석 확인 : 메뉴 4번
@@ -94,6 +96,4 @@ int selectDataNo(Attendance *s, int count){
 void readStudent(Attendance s){
         printf("%d %s %5d(회) %d(회)\n", s.studentno, s.name, s.attendance, s.late);
 }
-// 학생 정보 출력 함수
-
-
+// 학생 정보 출력
