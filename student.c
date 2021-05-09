@@ -22,36 +22,34 @@ int selectMenu(){
         return menu;
 } //메뉴 선택 함수
 
-typedef struct{
-    char name[100];
-    int studentno;
-    int attendance;
-    int late;
-} Attendance;
+
 
 void listStudent(Attendance *s, int count){
-    printf("\n 학번 이름 출석 지각\n");
-    printf("*****************\n");
-    for(int i=0; i<count; i++){
-        printf("%d ",i+1);
-        readStuduent(s[i]);
+   int i = 0;
+    printf("******************************\n");
+    printf(" \n학번 이름     출석    지각\n");
+    for (i = 0; i < count; i++)
+    {
+        //if (s[i].studentno <=0)
+            //continue;
+        printf("%d ", i + 1);
+        readStudent(s[i]);
     }
-}// 학생 데이터 조회 : 메뉴 1번
+}
 
- 
 int createStudent(Attendance *s){
-        char name[100];
-        getchar();
-        printf("\n학생 이름은? ");
-        fgets(name, 100, stdin);
-        rewind(stdin);
-        strcpy(s->name, name);
-        printf("학번은? ");
-        scanf("%d", &s->studentno);
-        printf("=> 추가 성공!\n");
-        return 0;
-}// 학생 정보 추가 : 메뉴 2번
-
+    char pname[100];
+    getchar();
+    printf("\n학생명은? ");
+    fgets(pname, 100, stdin);
+    strcpy(s->name, pname);
+rewind(stdin);
+    printf("학번? ");
+    scanf("%d", &s->studentno);
+    s->attendance= 0;
+    s->late = 0;
+    return 0;
+    }
 
 int updateStudent(Attendance *s){
         char rename[100];
@@ -72,8 +70,8 @@ int updateAttendance(Attendance *s){
 
         printf("\n출석? (Yes:1, No:0): ");
         scanf("%d", &up);
-	if(up == 1) s->attendance=s->attendance+1;
-	else s->late=s->late+1;
+        if(up == 1) s->attendance=s->attendance+1;
+        else s->late=s->late+1;
         printf("=> 출석 확인 완료!\n");
         return 1;
 } //출석 확인 : 메뉴 4번
@@ -99,6 +97,4 @@ int selectDataNo(Attendance *s, int count){
 void readStudent(Attendance s){
         printf("%d %s %5d(회) %d(회)\n", s.studentno, s.name, s.attendance, s.late);
 }
-// 학생 정보 출력 함수
-
-
+// 학생 정보 출력
