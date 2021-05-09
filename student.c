@@ -22,12 +22,38 @@ int selectMenu(){
         return menu;
 } //메뉴 선택 함수
 
-void listStudent(Attendance *s, int count){
-}
+typedef struct{
+  char name[20];
+  char attendance[20];
+  int late;
+  int studentno;
+} Attendance;
 
-int createStudent(Attendance *s){
-    return 0;
+void listStudent(Attendance *s, int count){
+       printf("\nNo Date Name Attendance\n");
+    printf("*****************\n");
+    for(int i=0; i<count; i++){
+        printf("%d ",i+1);
+        Attendance (s[i]);
     }
+}// 학생 데이터 조회 : 메뉴 1번
+
+ 
+int createStudent(Attendance *s){
+   int up;
+  printf("이름은?");
+  scanf("%s", s->name);
+  printf("학번은?");
+  scanf("%d", &s->studentno);
+  printf("출석?(Yes:1, No:0)");{
+      scanf("%d", &up);
+    	if(up == 1) s->attendance=s->attendance+1;
+  }
+  printf("지각?('Yes' or 'No'로만 대답하세요)");{
+     scanf("%d",&up);
+	    if(up ==1) s->late=s->late+1;
+  return 1;
+}// 학생 정보 추가 : 메뉴 2번
 
 int updateStudent(Attendance *s){
         char rename[100];
