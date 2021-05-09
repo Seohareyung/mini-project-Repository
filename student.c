@@ -25,7 +25,7 @@ int selectMenu(){
 void listStudent(Attendance *s, int count){
 	int i = 0;
     	printf("******************************\n");
-    	printf("  학번 이름     출석    지각\n");
+    	printf("  학번 이름  출석  지각\n");
     	for (i = 0; i < count; i++)
     	{
 		if (s[i].studentno <=0) continue;
@@ -36,15 +36,15 @@ void listStudent(Attendance *s, int count){
 
 int createStudent(Attendance *s){
 
-	char pname[100];
-  getchar();
-  printf("\n학생 이름은? ");
-  fgets(pname, 100, stdin);
+  	char pname[100];
+  	getchar();
+  	printf("\n학생 이름은? ");
+  	fgets(pname, 100, stdin);
 	strcpy(s->name, pname);
-  rewind(stdin);
-  printf("학번은? ");
-  scanf("%d", &s->studentno);
-  s->attendance = 0;
+  	rewind(stdin);
+  	printf("학번은? ");
+  	scanf("%d", &s->studentno);
+  	s->attendance = 0;
 	s->late = 0;
 	printf("=> 추가 성공!\n");    
 	return 1;
