@@ -30,30 +30,28 @@ typedef struct{
 } Attendance;
 
 void listStudent(Attendance *s, int count){
-       printf("\nNo Date Name Attendance\n");
+    printf("\n %d학번 %s이름 %5d출석 %d지각\n");
     printf("*****************\n");
     for(int i=0; i<count; i++){
         printf("%d ",i+1);
-        Attendance (s[i]);
+        readStduent(s[i]);
     }
 }// 학생 데이터 조회 : 메뉴 1번
 
  
 int createStudent(Attendance *s){
-   int up;
-  printf("이름은?");
-  scanf("%s", s->name);
-  printf("학번은?");
-  scanf("%d", &s->studentno);
-  printf("출석?(Yes:1, No:0)");{
-      scanf("%d", &up);
-    	if(up == 1) s->attendance=s->attendance+1;
-  }
-  printf("지각?('Yes' or 'No'로만 대답하세요)");{
-     scanf("%d",&up);
-	    if(up ==1) s->late=s->late+1;
-  return 1;
+        char name[100];
+        getchar();
+        printf("\n학생 이름은? ");
+        fgets(name, 100, stdin);
+        rewind(stdin);
+        strcpy(s->name, name);
+        printf("학번은? ");
+        scanf("%d", &s->studentno);
+        printf("=> 추가 성공!\n");
+        return 0;
 }// 학생 정보 추가 : 메뉴 2번
+
 
 int updateStudent(Attendance *s){
         char rename[100];
