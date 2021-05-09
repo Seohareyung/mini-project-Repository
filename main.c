@@ -6,7 +6,7 @@ int main(void)
     Attendance att[100];
     int count = 0, index = 0, menu;
 
-    while (1)
+    while(1)
     {
         menu = selectMenu();
         if (menu == 0)
