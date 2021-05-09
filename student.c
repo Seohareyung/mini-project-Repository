@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 #include "student.h"
 
 int selectMenu(){
@@ -35,19 +34,18 @@ void listStudent(Attendance *s, int count){
 }
 
 int createStudent(Attendance *s){
-
   	char pname[100];
   	getchar();
   	printf("\n학생 이름은? ");
   	fgets(pname, 100, stdin);
-	strcpy(s->name, pname);
+	  strcpy(s->name, pname);
   	rewind(stdin);
   	printf("학번은? ");
   	scanf("%d", &s->studentno);
   	s->attendance = 0;
-	s->late = 0;
-	printf("=> 추가 성공!\n");    
-	return 1;
+	  s->late = 0;
+	  printf("=> 추가 성공!\n");    
+	  return 1;
     }
 
 int updateStudent(Attendance *s){
@@ -69,12 +67,8 @@ int updateAttendance(Attendance *s){
 
         printf("\n출석? (Yes:1, No:0): ");
         scanf("%d", &up);
-<<<<<<< HEAD
-	if(up == 1) s->attendance=s->attendance+1;	else s->late=s->late+1;
-=======
         if(up == 1) s->attendance=s->attendance+1;
         else s->late=s->late+1;
->>>>>>> 79ceb907bf9eded9b72119d25d94d64376282e1d
         printf("=> 출석 확인 완료!\n");
         return 1;
 } //출석 확인 : 메뉴 4번
