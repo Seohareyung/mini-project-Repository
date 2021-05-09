@@ -69,8 +69,12 @@ int updateAttendance(Attendance *s){
 
         printf("\n출석? (Yes:1, No:0): ");
         scanf("%d", &up);
+<<<<<<< HEAD
+	if(up == 1) s->attendance=s->attendance+1;	else s->late=s->late+1;
+=======
         if(up == 1) s->attendance=s->attendance+1;
         else s->late=s->late+1;
+>>>>>>> 79ceb907bf9eded9b72119d25d94d64376282e1d
         printf("=> 출석 확인 완료!\n");
         return 1;
 } //출석 확인 : 메뉴 4번
