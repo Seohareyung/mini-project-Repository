@@ -30,8 +30,8 @@ void listStudent(Attendance *s, int count){
     printf(" \n학번 이름     출석    지각\n");
     for (i = 0; i < count; i++)
     {
-        //if (s[i].studentno <=0)
-            //continue;
+        if (s[i].studentno <=0)
+            continue;
         printf("%d ", i + 1);
         readStudent(s[i]);
     }
@@ -43,12 +43,12 @@ int createStudent(Attendance *s){
     printf("\n학생명은? ");
     fgets(pname, 100, stdin);
     strcpy(s->name, pname);
-rewind(stdin);
+    rewind(stdin);
     printf("학번? ");
     scanf("%d", &s->studentno);
     s->attendance= 0;
     s->late = 0;
-    return 0;
+    return 1;
     }
 
 int updateStudent(Attendance *s){
