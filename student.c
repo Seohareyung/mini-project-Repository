@@ -38,14 +38,14 @@ int createStudent(Attendance *s){
   	getchar();
   	printf("\n학생 이름은? ");
   	fgets(pname, 100, stdin);
-	  strcpy(s->name, pname);
+	strcpy(s->name, pname);
   	rewind(stdin);
   	printf("학번은? ");
   	scanf("%d", &s->studentno);
   	s->attendance = 0;
-	  s->late = 0;
-	  printf("=> 추가 성공!\n");    
-	  return 1;
+	s->late = 0;
+	printf("=> 추가 성공!\n");    
+	return 1;
     }
 
 int updateStudent(Attendance *s){
