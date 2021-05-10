@@ -96,5 +96,6 @@ void readStudent(Attendance s){
 }
 // 학생 정보 출력
 
-int searchStudent(Attendance *s, int count){ return 0; }
+int searchStudent(Attendance *s, int count){} // 학생 검색 : 메뉴 7번
 
+int searchStudentNo(Attendance *s, int count) {} // 학번 검색 : 메뉴 8번
