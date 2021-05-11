@@ -99,3 +99,5 @@ void readStudent(Attendance s){
 int searchStudent(Attendance *s, int count){} // 학생 검색 : 메뉴 7번
 
 int searchStudentNo(Attendance *s, int count) {} // 학번 검색 : 메뉴 8번
+
+int searchAttendanceNo(Attendance *s, int count) {}; //출석 횟수로 검색
