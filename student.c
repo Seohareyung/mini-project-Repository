@@ -100,9 +100,5 @@ int searchStudent(Attendance *s, int count){} // 학생 검색 : 메뉴 7번
 
 int searchStudentNo(Attendance *s, int count) {} // 학번 검색 : 메뉴 8번
 
-<<<<<<< HEAD
-int searchAttendanceNo(Attendance *s, int count) {} //츨석 횟수로 검색
-=======
 int searchAttendanceNo(Attendance *s, int count) {}; //출석 횟수로 검색
 
->>>>>>> ce23062b1ac0c8be7d262b4f210223fccf5a0965
