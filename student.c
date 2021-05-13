@@ -1,9 +1,12 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "student.h"
+
 
 int selectMenu(){
         int menu;
-        printf("\n\n");
+        printf("\n");
         printf("1. 학생 데이터 조회\n");
         printf("2. 학생 정보 추가 \n");
         printf("3. 학생 정보 수정\n");
@@ -96,9 +99,69 @@ void readStudent(Attendance s){
 }
 // 학생 정보 출력
 
-int searchStudent(Attendance *s, int count){} // 학생 검색 : 메뉴 7번
+void searchStudent(Attendance *s, int count){
+        int scnt = 0;
+        char search[20];
+        int i = 0;
 
-int searchStudentNo(Attendance *s, int count) {} // 학번 검색 : 메뉴 8번
+        printf("검색할 학생이름을 입력해주세요: ");
+        scanf("%s", search);
 
-int searchAttendanceNo(Attendance *s, int count) {}; //출석 횟수로 검색
+        printf("******************************\n");
+        printf(" \nno. 학번 이름     출석    지각\n");
+        for(i=0; i<count; i++){
+                if(s[i].studentno == -1) continue;
+                if(strstr(s[i].name, search)){
+                        printf("%2d)", i+1);
+                        readStudent(s[i]);
+                        scnt++;
+                }
+        }
+        if(scnt == 0) printf("=> 검색된 데이터 없음!\n");
+} //학생검색
+
+void searchStudentNo(Attendance *s, int count){
+        int scnt = 0;
+        int num = 0;
+        int i = 0;
+
+        printf("검색할 학생의 학번을 입력해주세요: ");
+        scanf("%d", &num);
+
+        printf("******************************\n");
+        printf(" \nno. 학번 이름     출석    지각\n");
+        for(i=0; i< count; i++){
+                if(s[i].studentno == -1) continue;
+                if(num == s[i].studentno){
+                        printf("%2d) ", i+1);
+                        readStudent(s[i]);
+                        scnt++;
+                }
+        }
+        if(scnt==0) printf("=> 검색된 데이터가 없음!\n");
+
+} // 학번으로 검색
+
+void searchAttendanceNo(Attendance *s, int count){
+        int scnt = 0;
+        int attno = 0;
+        int i = 0 ;
+
+        printf("출석 횟수를 입력해주세요(n번 이상 출석한 학생 모두 출력): ");
+        scanf("%d", &attno);
+
+        printf("******************************\n");
+        printf(" \nno. 학번 이름     출석    지각\n");
+
+        for(i=0; i<count; i++){
+                if(s[i].studentno==-1) continue;
+                if(s[i].attendance >= attno){
+                        printf("%2d) ", i+1);
+                        readStudent(s[i]);
+                        scnt++;
+                }
+        }        
+        if(scnt == 0) printf("=> 검색된 데이터 없음\n");
+} //출석 횟수로 검색
+
 

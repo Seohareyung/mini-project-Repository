@@ -25,10 +25,10 @@ int selectDataNo(Attendance *s, int index); //학생 정보 선택
 
 int deleteStudent(Attendance *s); //학생 정보 삭제
 
-int searchStudent(Attendance *s, int count); //학생검색
+void searchStudent(Attendance *s, int count); //학생검색
 
-int searchStudentNo(Attendance *s, int count); // 학번으로 검색
+void searchStudentNo(Attendance *s, int count); // 학번으로 검색
 
-int searchAttendanceNo(Attendance *s, int count); //출석 횟수로 검색
+void searchAttendanceNo(Attendance *s, int count); //출석 횟수로 검색
 
 
