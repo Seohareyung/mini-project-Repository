@@ -21,6 +21,8 @@ int selectMenu(){
         return menu;
 } //메뉴 선택 함수
 
+int loadStudent(Attendance *s); //파일에서 데이터 불러오기
+
 void listStudent(Attendance *s, int count){
 	int i = 0;
     	printf("******************************\n");
