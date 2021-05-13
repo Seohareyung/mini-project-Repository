@@ -19,6 +19,8 @@ int selectMenu(){
         return menu;
 } //메뉴 선택 함수
 
+int loadStudent(Attendance *s); //파일에서 데이터 불러오기
+
 void listStudent(Attendance *s, int count){
 	int i = 0;
     	printf("******************************\n");
@@ -36,14 +38,14 @@ int createStudent(Attendance *s){
   	getchar();
   	printf("\n학생 이름은? ");
   	fgets(pname, 100, stdin);
-	  strcpy(s->name, pname);
+	strcpy(s->name, pname);
   	rewind(stdin);
   	printf("학번은? ");
   	scanf("%d", &s->studentno);
   	s->attendance = 0;
-	  s->late = 0;
-	  printf("=> 추가 성공!\n");    
-	  return 1;
+	s->late = 0;
+	printf("=> 추가 성공!\n");    
+	return 1;
     }
 
 int updateStudent(Attendance *s){
@@ -98,4 +100,9 @@ int searchStudent(Attendance *s, int count){} // 학생 검색 : 메뉴 7번
 
 int searchStudentNo(Attendance *s, int count) {} // 학번 검색 : 메뉴 8번
 
+<<<<<<< HEAD
 int searchAttendanceNo(Attendance *s, int count) {} //츨석 횟수로 검색
+=======
+int searchAttendanceNo(Attendance *s, int count) {}; //출석 횟수로 검색
+
+>>>>>>> ce23062b1ac0c8be7d262b4f210223fccf5a0965
