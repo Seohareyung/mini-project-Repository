@@ -118,7 +118,7 @@ void searchStudent(Attendance *s, int count){
                 }
         }
         if(scnt == 0) printf("=> 검색된 데이터 없음!\n");
-} //학생검색 : 메뉴 7
+} //학생검색 : 메뉴 7번
 
 void searchStudentNo(Attendance *s, int count){
         int scnt = 0;
