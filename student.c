@@ -118,7 +118,7 @@ void searchStudent(Attendance *s, int count){
                 }
         }
         if(scnt == 0) printf("=> 검색된 데이터 없음!\n");
-} //학생검색
+} //학생검색 : 메뉴 7
 
 void searchStudentNo(Attendance *s, int count){
         int scnt = 0;
@@ -140,7 +140,7 @@ void searchStudentNo(Attendance *s, int count){
         }
         if(scnt==0) printf("=> 검색된 데이터가 없음!\n");
 
-} // 학번으로 검색
+} // 학번으로 검색 : 메뉴 8번
 
 void searchAttendanceNo(Attendance *s, int count){
         int scnt = 0;
@@ -162,6 +162,6 @@ void searchAttendanceNo(Attendance *s, int count){
                 }
         }        
         if(scnt == 0) printf("=> 검색된 데이터 없음\n");
-} //출석 횟수로 검색
+} //출석 횟수로 검색 : 메뉴 9번
 
 
