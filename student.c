@@ -24,15 +24,19 @@ int selectMenu(){
 
 int loadStudent(Attendance *s); //파일에서 데이터 불러오기
 
+void readStudent(Attendance s){
+        printf("%d %s %5d(회) %d(회)\n", s.studentno, s.name, s.attendance, s.late);
+}
+
 void listStudent(Attendance *s, int count){
-	int i = 0;
-    	printf("******************************\n");
-    	printf("  학번 이름  출석  지각\n");
-    	for (i = 0; i < count; i++)
-    	{
-		if (s[i].studentno <=0) continue;
-        	printf("%2d ", i + 1);
-        	readStudent(s[i]);
+   int i = 0;
+       printf("******************************\n");
+       printf("  학번 이름  출석  지각\n");
+       for (i = 0; i < count; i++)
+       {
+      if (s[i].studentno <=0) continue;
+           printf("%2d ", i + 1);
+           readStudent(s[i]);
     }
 }
 
@@ -94,10 +98,37 @@ int selectDataNo(Attendance *s, int count){
 } // 학생 정보 선택 함수
 
 
-void readStudent(Attendance s){
-        printf("%d %s %5d(회) %d(회)\n", s.studentno, s.name, s.attendance, s.late);
-}
-// 학생 정보 출력
+    void saveData(Attendance *s, int count){
+    FILE *fp;
+    fp = fopen("attendance.txt","wt");
+    for(int i =0;i<count;i++){
+        if(s[i].attendance == -1) continue;
+        fprintf(fp,"%d %s %d %d\n",s[i].studentno, s[i].name, s[i].attendance, s[i].late);
+    }
+        fclose(fp);
+        printf("저장됨!\n");
+
+}// 파일 저장함수: 메뉴 6번
+
+
+int loadData(Attendance *s){
+    FILE *fp;
+    fp = fopen("attendance.txt","rt");
+    int i =0;
+    if(fp == NULL){
+        printf("=> 파일 없음!\n");
+    }
+    else {
+        for (i=0;i<100;i++){
+            fscanf(fp, "%d", &s[i].studentno);
+            if(feof(fp)) break;
+            fscanf(fp, "%s %d %d", s[i].name, &s[i].attendance, &s[i].late);
+        }
+        fclose(fp);
+        printf("=> 로딩 성공\n");
+
+    }return i;
+} //파일 load 함수
 
 void searchStudent(Attendance *s, int count){
         int scnt = 0;
