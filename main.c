@@ -5,6 +5,8 @@ int main(void)
 {
     Attendance att[100];
     int count = 0, index = 0, menu;
+    count = loadStudent(att);
+    index = count;
 
     while(1)
     {
