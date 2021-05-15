@@ -22,8 +22,6 @@ int selectMenu(){
         return menu;
 } //메뉴 선택 함수
 
-int loadStudent(Attendance *s); //파일에서 데이터 불러오기
-
 void readStudent(Attendance s){
         printf("%d %s %5d(회) %d(회)\n", s.studentno, s.name, s.attendance, s.late);
 }
@@ -97,8 +95,7 @@ int selectDataNo(Attendance *s, int count){
         return no;
 } // 학생 정보 선택 함수
 
-
-    void saveData(Attendance *s, int count){
+void savStudent(Attendance *s, int count){
     FILE *fp;
     fp = fopen("attendance.txt","wt");
     for(int i =0;i<count;i++){
@@ -111,7 +108,7 @@ int selectDataNo(Attendance *s, int count){
 }// 파일 저장함수: 메뉴 6번
 
 
-int loadData(Attendance *s){
+int loadStudent(Attendance *s){
     FILE *fp;
     fp = fopen("attendance.txt","rt");
     int i =0;
