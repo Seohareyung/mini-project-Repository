@@ -63,7 +63,7 @@ int main(void)
             }
         else if(menu == 6)
         {
-            saveData(att, index);
+            saveStudent(att, index);
         }
         else if (menu == 7)
         {
