@@ -59,10 +59,10 @@ int main(void)
                     if(deleteStudent(&att[no-1])) count--;
                 }
             }
-       /* else if(menu == 6)
+        else if(menu == 6)
         {
             saveData(att, index);
-        }*/
+        }
         else if (menu == 7)
         {
             searchStudent(att, index);
