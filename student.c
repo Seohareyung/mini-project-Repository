@@ -95,7 +95,7 @@ int selectDataNo(Attendance *s, int count){
         return no;
 } // 학생 정보 선택 함수
 
-void savStudent(Attendance *s, int count){
+void saveStudent(Attendance *s, int count){
     FILE *fp;
     fp = fopen("attendance.txt","wt");
     for(int i =0;i<count;i++){
