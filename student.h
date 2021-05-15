@@ -13,7 +13,7 @@ void readStudent(Attendance s); // 학생 정보 조회
 
 int loadStudent(Attendance *s); //파일에서 데이터 불러오기
 
-void saveStduent(Attendance *s, int count); //파일에 데이터 저장하기
+void saveStudent(Attendance *s, int count); //파일에 데이터 저장하기
 
 void listStudent(Attendance *s, int count); //전체 등록된 학생
 
