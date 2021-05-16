@@ -29,7 +29,7 @@ void readStudent(Attendance s){
 void listStudent(Attendance *s, int count){
    int i = 0;
        printf("******************************\n");
-       printf("  학번 이름  출석  지각\n");
+       printf("    학번    이름   \n    출석    지각\n");
        for (i = 0; i < count; i++)
        {
       if (s[i].studentno <=0) continue;
@@ -136,7 +136,7 @@ void searchStudent(Attendance *s, int count){
         scanf("%s", search);
 
         printf("******************************\n");
-        printf(" \nno. 학번 이름     출석    지각\n");
+        printf("    학번    이름   \n    출석    지각\n");
         for(i=0; i<count; i++){
                 if(s[i].studentno == -1) continue;
                 if(strstr(s[i].name, search)){
@@ -157,7 +157,7 @@ void searchStudentNo(Attendance *s, int count){
         scanf("%d", &num);
 
         printf("******************************\n");
-        printf(" \nno. 학번 이름     출석    지각\n");
+        printf("    학번    이름   \n    출석    지각\n");
         for(i=0; i< count; i++){
                 if(s[i].studentno == -1) continue;
                 if(num == s[i].studentno){
@@ -179,7 +179,7 @@ void searchAttendanceNo(Attendance *s, int count){
         scanf("%d", &attno);
 
         printf("******************************\n");
-        printf(" \nno. 학번 이름     출석    지각\n");
+        printf("    학번    이름   \n    출석    지각\n");
 
         for(i=0; i<count; i++){
                 if(s[i].studentno==-1) continue;
