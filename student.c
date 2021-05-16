@@ -70,7 +70,7 @@ int updateStudent(Attendance *s){
 int updateAttendance(Attendance *s){
         int up;
 
-        printf("\n출석? (Yes:1, No:0): ");
+        printf("\n번호로 입력하세요 : (출석:1, 지각:0): ");
         scanf("%d", &up);
         if(up == 1) s->attendance=s->attendance+1;
         else s->late=s->late+1;
